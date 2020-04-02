@@ -53,5 +53,3 @@
 - angular: 3002
 
 ## 个人微信
-
-![欢迎添加微信探讨](https://images.gitee.com/uploads/images/2019/1212/225746_010d72cb_1957979.jpeg "WechatIMG91.jpeg")
