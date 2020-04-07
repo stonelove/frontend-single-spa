@@ -46,7 +46,21 @@ singleSpa.registerApplication( //注册微前端服务
     },
     location => location.pathname.startsWith('/vue') // 配置微前端模块前缀
 );
-
+singleSpa.registerApplication( //注册微前端服务
+    'antVueDemo',
+    async () => {
+        // 注册用函数，
+        // return 一个singleSpa 模块对象，模块对象来自于要加载的js导出
+        // 如果这个函数不需要在线引入，只需要本地引入一块加载：
+        // () => import('xxx/main.js')
+        let antVueDemo = null;
+        await getManifest('http://127.0.0.1:3004/manifest.json', 'app').then(() => {
+            antVueDemo = window.antVueDemo;
+        });
+        return antVueDemo;
+    },
+    location => location.pathname.startsWith('/antVueDemo') // 配置微前端模块前缀
+);
 singleSpa.registerApplication(
     'reactApp',
     async () => {
@@ -69,18 +83,18 @@ singleSpa.registerApplication(
     location => location.pathname.startsWith('/angular')
 );
 singleSpa.registerApplication( //注册微前端服务
-    'antDesignProVue',
+    'antDesignPro-vue',
     async () => {
         // 注册用函数，
         // return 一个singleSpa 模块对象，模块对象来自于要加载的js导出
         // 如果这个函数不需要在线引入，只需要本地引入一块加载：
         // () => import('xxx/main.js')
         let antDesignProVue = null;
-        await getManifest('http://127.0.0.1:3003/manifest.json', 'app').then(() => {
+        await getManifest('http://10.1.65.70:3003/manifest.json', 'app').then(() => {
             antDesignProVue = window.antDesignProVue;
         });
         return antDesignProVue;
     },
-    location => location.pathname.startsWith('/antVue') // 配置微前端模块前缀
+    location => location.pathname.startsWith('/antDesignProVue') // 配置微前端模块前缀
 );
 singleSpa.start(); // 启动

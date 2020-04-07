@@ -47,7 +47,22 @@
             </a>
           </a-menu-item>
         </a-sub-menu>
-        
+        <a-sub-menu key="5">
+          <span slot="title">
+            <a-icon type="user" />
+            <span>antVueDemo</span>
+          </span>
+          <a-menu-item key="5-1">
+            <a href="/antVueDemo#" @click="goToChildRoute">
+              Home
+            </a>
+          </a-menu-item>
+          <a-menu-item key="5-2">
+            <a href="/antVueDemo#/about" @click="goToChildRoute">
+              About
+            </a>
+          </a-menu-item>
+        </a-sub-menu>
       </a-menu>
     </a-layout-sider>
     <a-layout>
