@@ -79,6 +79,9 @@
           <div id="single-vue" class="single-spa-vue">
             <div id="vue"></div>
           </div>
+           <div id="ant-design-pro-vue" class="ant-design-pro-vue">
+            <div id="vue"></div>
+          </div>
           <div id="angular-app"></div>
           <router-view :key="$route.path" />
         </div>

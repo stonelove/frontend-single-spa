@@ -32,7 +32,7 @@ Vue.use(Dialog)
 //   render: h => h(App)
 // }).$mount('#app')
 const vueOptions = {
-  el: '#app',
+  el: '#vue',
   router,
   store,
   created: bootstrapConfig,

@@ -83,14 +83,14 @@ singleSpa.registerApplication(
     location => location.pathname.startsWith('/angular')
 );
 singleSpa.registerApplication( //注册微前端服务
-    'antDesignPro-vue',
+    'antDesignProVue',
     async () => {
         // 注册用函数，
         // return 一个singleSpa 模块对象，模块对象来自于要加载的js导出
         // 如果这个函数不需要在线引入，只需要本地引入一块加载：
         // () => import('xxx/main.js')
         let antDesignProVue = null;
-        await getManifest('http://10.1.65.70:3003/manifest.json', 'app').then(() => {
+        await getManifest('http://127.0.0.1:3003/manifest.json', 'app').then(() => {
             antDesignProVue = window.antDesignProVue;
         });
         return antDesignProVue;
