@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "ant-design-vue": "^1.4.3",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "core-js": "^3.3.2",
     "create-react-app": "^3.2.0",
     "single-spa": "^4.4.1",
