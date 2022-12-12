@@ -13,7 +13,7 @@
   ],
   "dependencies": {
     "core-js": "^3.3.2",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "postcss-selector-namespace": "^3.0.1",
     "single-spa-vue": "^1.5.2",
     "stats-webpack-plugin": "^0.7.0",
